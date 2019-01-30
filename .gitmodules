@@ -31,3 +31,6 @@
 [submodule "pack/plugins/start/c.vim"]
 	path = pack/plugins/start/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule "pack/plugins/start/undotree"]
+	path = pack/plugins/start/undotree
+	url = https://github.com/mbbill/undotree.git

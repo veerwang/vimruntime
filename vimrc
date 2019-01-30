@@ -155,7 +155,7 @@ let NERDTreeShowBookmarks=1
 map ss <Plug>(easymotion-s)
 let g:EasyMotion_force_csapprox = 1
 "8) Show undo tree
-nmap <leader>u :UndotreeToggle<CR>
+nmap <silent><leader>u :UndotreeToggle<CR>
 let g:undotree_WindowLayout=2
 " Persistent undo
 set undofile
