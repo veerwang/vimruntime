@@ -43,3 +43,6 @@
 [submodule "pack/plugins/start/vim-gutentags"]
 	path = pack/plugins/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "pack/plugins/start/vim-preview"]
+	path = pack/plugins/start/vim-preview
+	url = https://github.com/skywind3000/vim-preview.git
