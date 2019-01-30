@@ -127,8 +127,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = ' '
-let g:airline_theme='papercolor'
-"let g:airline_theme='badwolf'
+"let g:airline_theme='papercolor'
+let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_section_c='%F'
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
@@ -162,6 +162,17 @@ set undofile
 set undodir=~/.vim/undodir
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+"9) Set the ycm configrature,it will first read from current file
+let g:ycm_global_ycm_extra_conf = '/home/kevin/.vim/pack/.ycm_extra_conf.py'
+let g:ycm_semantic_triggers = {}
+let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&']
+let g:ycm_semantic_triggers.cpp = ['->', '.', ' ', '(', '[', '&']
+let g:ycm_collect_identifiers_from_tag_files=1
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_auto_trigger=1
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_confirm_extra_conf=0
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
