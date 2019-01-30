@@ -125,8 +125,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = ' '
-"let g:airline_theme='gruvbox'
-let g:airline_theme='badwolf'
+let g:airline_theme='papercolor'
+"let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_section_c='%F'
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
@@ -139,3 +139,64 @@ function! AirlineThemePatch(palette)
 		endfor
 	endif
 endfunction
+"5) tagbar
+map tb :TagbarToggle<CR>
+let g:tagbar_ctags_bin='/usr/bin/ctags'
+let g:tagbar_width=30
+highlight TagbarScope guifg=Green ctermfg=Green
+"autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Z] my short key define 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"1) open help documentaion
+nmap <leader>h :tab help<cr>
+
+"2) show the version information
+nmap <leader>v :version<cr>
+
+"3) close the table
+"Ctrl-v Ctrl-c input the ^C
+nmap  :close<cr>
+nmap  :qall<cr>
+
+"5) Alt-w write the file
+" Ctrl-v Alt-w: to input ^[w charactor
+nmap w :w <cr>
+
+"6) For auto rename plugin
+nmap <leader>ren :Renamer <cr>
+nmap <leader>ree :Ren <cr>
+
+"7) Quickfix window
+nmap o :cope<cr>
+nmap c :ccl<cr>
+nmap n :cn<cr>
+nmap p :cp<cr>
+
+"8) Edit my confirature file
+nmap <leader>c :edit ~/.vimrc <cr>
+
+"9) Edit my vim script
+nmap <leader>kt :edit ~/.vim/plugin/makescript.vim <cr>
+
+"10) Favorite filetype
+set ffs=unix,dos,mac
+nmap <leader>fd :se ff=dos<cr>
+nmap <leader>fu :se ff=unix<cr>
+
+"11) binary file edit 
+nmap <leader>eb :%!xxd<cr>
+nmap <leader>rb :%!xxd -r<cr>
+
+"12) Tab operation
+nmap <silent><leader>tn :tabnew<cr>
+nmap <silent><leader><left> :tabmove -1<cr>
+nmap <silent><leader><right> :tabmove +1<cr>
+nmap <silent><leader><down> :$tabmove<cr>
+nmap <silent><leader><up> :0tabmove<cr>
+
+"13) adjust window width
+nmap <leader><leader>n :vertical res -5 <cr>
+nmap <leader><leader>m :vertical res +5 <cr>
+nmap <leader><leader>p :res -5 <cr>
+nmap <leader><leader>l :res +5 <cr>
