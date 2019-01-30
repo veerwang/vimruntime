@@ -19,3 +19,6 @@
 [submodule "pack/plugins/start/Tagbar"]
 	path = pack/plugins/start/Tagbar
 	url = https://github.com/vim-scripts/Tagbar.git
+[submodule "pack/plugins/start/nerdtree"]
+	path = pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

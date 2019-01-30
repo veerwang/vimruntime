@@ -145,6 +145,10 @@ let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_width=30
 highlight TagbarScope guifg=Green ctermfg=Green
 "autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
+"6) NERDTree configration
+map <F4> :NERDTreeToggle<cr>
+let NERDTreeWinPos="left"
+let NERDTreeShowBookmarks=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
