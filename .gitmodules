@@ -1,0 +1,6 @@
+[submodule "pack/plugins/start/a.vim"]
+	path = pack/plugins/start/a.vim
+	url = https://github.com/vim-scripts/a.vim.git
+[submodule "pack/plugins/start/vim-fugitive.git"]
+	path = pack/plugins/start/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git

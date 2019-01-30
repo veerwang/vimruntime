@@ -1,0 +1,7 @@
+===== log =====
+
+0.创建工程 my vim-runtime repository 2019.01.30
+1.添加首个a.vim插件，以git submodule的方式进行
+	git submodule add https://github.com/vim-scripts/a.vim.git pack/plugins/start/a.vim
+2.如果要进行新仓库的下载，使用以下命令
+	git clone --recursive github.com/vimruntime.git/ .vim 
