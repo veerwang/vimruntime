@@ -28,3 +28,6 @@
 [submodule "pack/plugins/start/vim-merginal"]
 	path = pack/plugins/start/vim-merginal
 	url = http://github.com/idanarye/vim-merginal.git
+[submodule "pack/plugins/start/c.vim"]
+	path = pack/plugins/start/c.vim
+	url = https://github.com/vim-scripts/c.vim.git

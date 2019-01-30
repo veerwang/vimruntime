@@ -108,6 +108,8 @@ let g:viewdoc_open='topleft new'
 
 "1) fugitive key map
 nmap <leader>gs :Gstatus<cr>
+" merginal plugin
+nmap <leader>br :MerginalToggle<CR>
 "2) vim-headerguard 
 "add headerguard
 nmap <leader>hd :HeaderguardAdd<CR>
@@ -152,6 +154,14 @@ let NERDTreeShowBookmarks=1
 "7) easymotion set
 map ss <Plug>(easymotion-s)
 let g:EasyMotion_force_csapprox = 1
+"8) Show undo tree
+nmap <leader>u :UndotreeToggle<CR>
+let g:undotree_WindowLayout=2
+" Persistent undo
+set undofile
+set undodir=~/.vim/undodir
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
