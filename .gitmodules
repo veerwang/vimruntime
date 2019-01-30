@@ -7,3 +7,6 @@
 [submodule "pack/plugins/start/vim-headerguard"]
 	path = pack/plugins/start/vim-headerguard
 	url = https://github.com/drmikehenry/vim-headerguard
+[submodule "pack/plugins/start/vim-colorschemes"]
+	path = pack/plugins/start/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
