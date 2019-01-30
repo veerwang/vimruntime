@@ -149,6 +149,9 @@ highlight TagbarScope guifg=Green ctermfg=Green
 map <F4> :NERDTreeToggle<cr>
 let NERDTreeWinPos="left"
 let NERDTreeShowBookmarks=1
+"7) easymotion set
+map ss <Plug>(easymotion-s)
+let g:EasyMotion_force_csapprox = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
