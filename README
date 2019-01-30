@@ -11,3 +11,5 @@
 	git submodule update --recursive --remote
 4.从github上克隆出该工程
 	git clone --recursive git@github.com:veerwang/vimruntime.git .vim
+5.编译ycm的命令
+	./install.py --clang-completer --system-libclang --java-completer
