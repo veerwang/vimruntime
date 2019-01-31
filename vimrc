@@ -186,6 +186,10 @@ let g:gutentags_project_root = ['.root']
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 " change focus to quickfix window after search (optional).
 let g:gutentags_plus_switch = 1
+"11)jedi for python
+"need  jedi and python-syntax plugins
+let g:jedi#auto_initialization=1
+let g:jedi#completions_command = "<C-N>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

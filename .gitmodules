@@ -49,3 +49,9 @@
 [submodule "pack/plugins/start/gutentags_plus"]
 	path = pack/plugins/start/gutentags_plus
 	url = https://github.com/skywind3000/gutentags_plus.git
+[submodule "pack/plugins/start/jedi-vim"]
+	path = pack/plugins/start/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "pack/plugins/start/python-syntax"]
+	path = pack/plugins/start/python-syntax
+	url = https://github.com/hdima/python-syntax.git
