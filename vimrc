@@ -57,8 +57,7 @@ set nobackup
 set shortmess=atl
 
 "15)set the tags file name
-set tags=tags;
-
+set tags=./.tags;,.tags
 "16) turn the wild menu
 set wildmenu
 
@@ -173,6 +172,15 @@ let g:ycm_auto_trigger=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_confirm_extra_conf=0
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"10) gutentags_plus 
+" enable gtags module
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
+" config project root markers.
+let g:gutentags_project_root = ['.root']
+" generate datebases in my cache directory, prevent gtags files polluting my project
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+" change focus to quickfix window after search (optional).
+let g:gutentags_plus_switch = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
