@@ -64,3 +64,6 @@
 [submodule "pack/plugins/start/Conque-Shell"]
 	path = pack/plugins/start/Conque-Shell
 	url = https://github.com/vim-scripts/Conque-Shell.git
+[submodule "pack/plugins/start/LeaderF"]
+	path = pack/plugins/start/LeaderF
+	url = https://github.com/Yggdroot/LeaderF.git

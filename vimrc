@@ -203,6 +203,8 @@ let g:ConqueTerm_ReadUnfocused=1
 let g:ConqueTerm_CloseOnEnd = 1
 let g:ConqueTerm_CWInsert = 1
 nmap <leader>sh :ConqueTermSplit bash<cr>
+"13) Leadf fuzzy find tool 
+nnoremap <leader>fz :LeaderfFile<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
