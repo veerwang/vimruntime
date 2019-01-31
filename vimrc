@@ -101,6 +101,11 @@ let $MYEMAIL="kevin.wang2004@hotmail.com"
 "29) set the man page display on the top window
 let g:viewdoc_open='topleft new'
 
+"30) set for gtags
+" need pip install pygments
+let $GTAGSLABEL = 'native-pygments'
+let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf' " 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [B] plugin manage segment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
