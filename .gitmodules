@@ -61,3 +61,6 @@
 [submodule "pack/plugins/start/gitv"]
 	path = pack/plugins/start/gitv
 	url = https://github.com/vim-scripts/gitv.git
+[submodule "pack/plugins/start/Conque-Shell"]
+	path = pack/plugins/start/Conque-Shell
+	url = https://github.com/vim-scripts/Conque-Shell.git

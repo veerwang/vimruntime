@@ -194,6 +194,15 @@ let g:gutentags_plus_switch = 1
 "need  jedi and python-syntax plugins
 let g:jedi#auto_initialization=1
 let g:jedi#completions_command = "<C-N>"
+"12) Shell bash plugin
+let g:ConqueTerm_CodePage=0
+let g:ConqueTerm_Color = 2
+let g:ConqueTerm_StartMessages = 0
+let g:ConqueTerm_FastMode=0
+let g:ConqueTerm_ReadUnfocused=1
+let g:ConqueTerm_CloseOnEnd = 1
+let g:ConqueTerm_CWInsert = 1
+nmap <leader>sh :ConqueTermSplit bash<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
