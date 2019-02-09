@@ -67,3 +67,6 @@
 [submodule "pack/plugins/start/LeaderF"]
 	path = pack/plugins/start/LeaderF
 	url = https://github.com/Yggdroot/LeaderF.git
+[submodule "pack/plugins/start/bash-support.vim"]
+	path = pack/plugins/start/bash-support.vim
+	url = https://github.com/vim-scripts/bash-support.vim.git
