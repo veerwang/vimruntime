@@ -60,11 +60,13 @@ flags = [
 '-x',
 'c++',
 '-isystem',
-'/usr/local/include'
+'/usr/include/c++/8.2.1',
 '-isystem',
-'/usr/include'
+'/usr/local/include',
 '-isystem',
-'/usr/include/c++'
+'/usr/include',
+'-isystem',
+'/usr/include/c++',
 '-isystem',
 '../BoostParts',
 '-isystem',
