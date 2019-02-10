@@ -58,6 +58,7 @@ set shortmess=atl
 
 "15)set the tags file name
 set tags=./.tags;,.tags
+
 "16) turn the wild menu
 set wildmenu
 
@@ -105,6 +106,9 @@ let g:viewdoc_open='topleft new'
 " need pip install pygments
 let $GTAGSLABEL = 'native-pygments'
 let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf' " 
+
+"31) set path of system head file
+set path+=/usr/local/include
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [B] plugin manage segment
@@ -180,12 +184,26 @@ let g:ycm_min_num_of_chars_for_completion=2
 let g:ycm_auto_trigger=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_confirm_extra_conf=0
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_filetype_blacklist = {
+        \ 'tagbar' : 1,
+        \ 'qf' : 1,
+        \ 'notes' : 1,
+        \ 'markdown' : 1,
+        \ 'unite' : 1,
+        \ 'text' : 1,
+        \ 'vimwiki' : 1,
+        \ 'pandoc' : 1,
+        \ 'infolog' : 1,
+        \ 'mail' : 1
+        \}
+let g:ycm_filetype_specific_completion_to_disable = {
+        \ 'gitcommit': 1
+        \}
 "10) gutentags_plus 
 " enable gtags module
 let g:gutentags_modules = ['ctags', 'gtags_cscope']
 " config project root markers.
-let g:gutentags_project_root = ['.root']
+let g:gutentags_project_root = ['.root','.svn','.git','.project']
 " generate datebases in my cache directory, prevent gtags files polluting my project
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 " change focus to quickfix window after search (optional).
@@ -260,3 +278,4 @@ nmap <leader><leader>n :vertical res -5 <cr>
 nmap <leader><leader>m :vertical res +5 <cr>
 nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
+
