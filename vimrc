@@ -118,10 +118,6 @@ set path+=/usr/local/include
 nmap <leader>gs :Gstatus<cr>
 " merginal plugin
 nmap <leader>br :MerginalToggle<CR>
-" Gitv to show git log, gv:show project log,gV:show someone file log
-nmap <leader>gv :Gitv --all<CR>
-nmap <leader>gV :Gitv! --all<CR>
-vmap <leader>gV :Gitv! --all<CR>
 "2) vim-headerguard 
 "add headerguard
 nmap <leader>hd :HeaderguardAdd<CR>
