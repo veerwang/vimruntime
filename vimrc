@@ -23,6 +23,7 @@ let g:solarized_termcolors=256
 
 " 4) set the line number 
 set nu
+set relativenumber
 
 " 5) set the syntax on
 syntax on
