@@ -224,7 +224,9 @@ nnoremap <leader>fz :LeaderfFile<CR>
 let g:GITLOG_default_mode = 2
 map <silent> <f7> :call GITLOG_ToggleWindows()<cr>
 map <silent> <f5> :call GITLOG_FlipWindows()<cr>
-
+"15) tig-explore base on tig
+nnoremap <Leader>t :TigOpenProjectRootDir<CR>
+nnoremap <Leader>b :TigBlame<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -280,4 +282,5 @@ nmap <leader><leader>n :vertical res -5 <cr>
 nmap <leader><leader>m :vertical res +5 <cr>
 nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
+
 

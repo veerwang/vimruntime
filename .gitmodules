@@ -79,3 +79,6 @@
 [submodule "pack/plugins/start/vimgitlog"]
 	path = pack/plugins/start/vimgitlog
 	url = https://github.com/PAntoine/vimgitlog.git
+[submodule "pack/plugins/start/tig-explorer.vim"]
+	path = pack/plugins/start/tig-explorer.vim
+	url = https://github.com/iberianpig/tig-explorer.vim.git
