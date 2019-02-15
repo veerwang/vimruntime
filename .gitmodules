@@ -76,3 +76,6 @@
 [submodule "nerdtree-git-plugin"]
 	path = nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "pack/plugins/start/vimgitlog"]
+	path = pack/plugins/start/vimgitlog
+	url = https://github.com/PAntoine/vimgitlog.git

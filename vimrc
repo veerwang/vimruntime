@@ -220,6 +220,11 @@ let g:ConqueTerm_CWInsert = 1
 nmap <leader>sh :ConqueTermSplit bash<cr>
 "13) Leadf fuzzy find tool 
 nnoremap <leader>fz :LeaderfFile<CR>
+"14) vimgitlog
+let g:GITLOG_default_mode = 2
+map <silent> <f7> :call GITLOG_ToggleWindows()<cr>
+map <silent> <f5> :call GITLOG_FlipWindows()<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
