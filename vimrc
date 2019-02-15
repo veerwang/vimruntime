@@ -116,7 +116,7 @@ set path+=/usr/local/include
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "1) fugitive key map
-nmap <leader>gs :Gstatus<cr>
+map <silent> <f3> :Gstatus<cr>
 " merginal plugin
 nmap <leader>br :MerginalToggle<CR>
 "2) vim-headerguard 
@@ -225,7 +225,7 @@ let g:GITLOG_default_mode = 2
 map <silent> <f7> :call GITLOG_ToggleWindows()<cr>
 map <silent> <f5> :call GITLOG_FlipWindows()<cr>
 "15) tig-explore base on tig
-nnoremap <Leader>t :TigOpenProjectRootDir<CR>
+map <silent> <f6> :TigOpenProjectRootDir<CR>
 nnoremap <Leader>b :TigBlame<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
