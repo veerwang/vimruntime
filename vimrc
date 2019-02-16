@@ -253,7 +253,6 @@ call venu#addItem(s:vimconfigmenu, 'Version', ':version')
 call venu#addItem(s:vimconfigmenu, 'Vim Help', ':tab help')
 call venu#register(s:vimconfigmenu)
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
