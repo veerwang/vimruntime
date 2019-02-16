@@ -121,7 +121,6 @@ set path+=/usr/local/include
 " merginal plugin
 "2) vim-headerguard 
 "add headerguard
-nmap <leader>hd :HeaderguardAdd<CR>
 " vim-headerguard configure
 function! g:HeaderguardName()
 return "INCLUDED_" . toupper(expand('%:t:gs/[^0-9a-zA-Z_]/_/g'))
@@ -244,14 +243,22 @@ let s:bashmenu = venu#create('Bash')
 call venu#addItem(s:bashmenu, 'Bash Terminal', ':ConqueTermSplit bash')
 call venu#register(s:bashmenu)
 
+let s:programmenu = venu#create('Programe')
+call venu#addItem(s:programmenu, 'Add C/C++ Head Flag', ':HeaderguardAdd')
+call venu#register(s:programmenu)
+
+let s:vimconfigmenu = venu#create('Config')
+call venu#addItem(s:vimconfigmenu, 'Configure Vim', ':edit ~/.vimrc')
+call venu#addItem(s:vimconfigmenu, 'Version', ':version')
+call venu#addItem(s:vimconfigmenu, 'Vim Help', ':tab help')
+call venu#register(s:vimconfigmenu)
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "1) open help documentaion
-nmap <leader>h :tab help<cr>
-
 "2) show the version information
-nmap <leader>v :version<cr>
 
 "3) close the table
 "Ctrl-v Ctrl-c input the ^C
@@ -273,7 +280,6 @@ nmap n :cn<cr>
 nmap p :cp<cr>
 
 "8) Edit my confirature file
-nmap <leader>c :edit ~/.vimrc <cr>
 
 "9) Edit my vim script
 nmap <leader>kt :edit ~/.vim/plugin/makescript.vim <cr>
@@ -299,5 +305,3 @@ nmap <leader><leader>n :vertical res -5 <cr>
 nmap <leader><leader>m :vertical res +5 <cr>
 nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
-
-
