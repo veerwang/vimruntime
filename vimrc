@@ -241,7 +241,7 @@ call venu#addItem(s:searchmenu, 'File Search', ':LeaderfFile')
 call venu#register(s:searchmenu)
 
 let s:bashmenu = venu#create('Bash')
-call venu#addItem(s:bashmenu, 'Bash Terminal', ':ConqueTermSplit bash')
+call venu#addItem(s:bashmenu, 'Terminal', ':Deol -split')
 call venu#register(s:bashmenu)
 
 let s:programmenu = venu#create('Programe')
