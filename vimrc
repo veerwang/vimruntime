@@ -116,9 +116,9 @@ set path+=/usr/local/include
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "1) fugitive key map
-map <silent> <f3> :Gstatus<cr>
+"map <silent> <f3> :Gstatus<cr>
+"move to venu function
 " merginal plugin
-nmap <leader>br :MerginalToggle<CR>
 "2) vim-headerguard 
 "add headerguard
 nmap <leader>hd :HeaderguardAdd<CR>
@@ -151,20 +151,17 @@ function! AirlineThemePatch(palette)
 	endif
 endfunction
 "5) tagbar
-map tb :TagbarToggle<CR>
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_width=30
 highlight TagbarScope guifg=Green ctermfg=Green
 "autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 "6) NERDTree configration
-map <F4> :NERDTreeToggle<cr>
 let NERDTreeWinPos="left"
 let NERDTreeShowBookmarks=1
 "7) easymotion set
 map ss <Plug>(easymotion-s)
 let g:EasyMotion_force_csapprox = 1
 "8) Show undo tree
-nmap <silent><leader>u :UndotreeToggle<CR>
 let g:undotree_WindowLayout=2
 " Persistent undo
 set undofile
@@ -217,16 +214,36 @@ let g:ConqueTerm_FastMode=0
 let g:ConqueTerm_ReadUnfocused=1
 let g:ConqueTerm_CloseOnEnd = 1
 let g:ConqueTerm_CWInsert = 1
-nmap <leader>sh :ConqueTermSplit bash<cr>
 "13) Leadf fuzzy find tool 
-nnoremap <leader>fz :LeaderfFile<CR>
 "14) vimgitlog
 let g:GITLOG_default_mode = 2
-map <silent> <f7> :call GITLOG_ToggleWindows()<cr>
 map <silent> <f5> :call GITLOG_FlipWindows()<cr>
 "15) tig-explore base on tig
-map <silent> <f6> :TigOpenProjectRootDir<CR>
-nnoremap <Leader>b :TigBlame<CR>
+"16) vim-vmenu
+map <silent> <f12> :VenuPrint<cr>
+
+let s:gitmenu = venu#create('Git')
+call venu#addItem(s:gitmenu, 'Git Status', ':Gstatus')
+call venu#addItem(s:gitmenu, 'Git Log', '::call GITLOG_ToggleWindows()')
+call venu#addItem(s:gitmenu, 'Git Branch', ':MerginalToggle')
+call venu#addItem(s:gitmenu, 'Tig Browse', ':TigOpenProjectRootDir')
+call venu#addItem(s:gitmenu, 'Tig Blame', ':TigBlame')
+call venu#register(s:gitmenu)
+
+let s:filemenu = venu#create('Edit')
+call venu#addItem(s:filemenu, 'File Browse', ':NERDTreeToggle')
+call venu#addItem(s:filemenu, 'File Structure', ':TagbarToggle')
+call venu#addItem(s:filemenu, 'Undo Tree', ':UndotreeToggle')
+call venu#register(s:filemenu)
+
+let s:searchmenu = venu#create('Search')
+call venu#addItem(s:searchmenu, 'File Search', ':LeaderfFile')
+call venu#register(s:searchmenu)
+
+let s:bashmenu = venu#create('Bash')
+call venu#addItem(s:bashmenu, 'Bash Terminal', ':ConqueTermSplit bash')
+call venu#register(s:bashmenu)
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
