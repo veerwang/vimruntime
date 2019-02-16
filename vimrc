@@ -223,7 +223,8 @@ map <silent> <f12> :VenuPrint<cr>
 
 let s:gitmenu = venu#create('Git')
 call venu#addItem(s:gitmenu, 'Git Status', ':Gstatus')
-call venu#addItem(s:gitmenu, 'Git Log', '::call GITLOG_ToggleWindows()')
+call venu#addItem(s:gitmenu, 'Git Log', ':Gitv')
+call venu#addItem(s:gitmenu, 'Git Brnch Log', ':call GITLOG_ToggleWindows()')
 call venu#addItem(s:gitmenu, 'Git Branch', ':MerginalToggle')
 call venu#addItem(s:gitmenu, 'Tig Browse', ':TigOpenProjectRootDir')
 call venu#addItem(s:gitmenu, 'Tig Blame', ':TigBlame')
