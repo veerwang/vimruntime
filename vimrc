@@ -306,3 +306,5 @@ nmap <leader><leader>n :vertical res -5 <cr>
 nmap <leader><leader>m :vertical res +5 <cr>
 nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
+
+let g:rainbow_active = 1

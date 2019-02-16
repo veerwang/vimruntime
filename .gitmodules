@@ -91,3 +91,6 @@
 [submodule "pack/plugins/start/agit.vim"]
 	path = pack/plugins/start/agit.vim
 	url = https://github.com/cohama/agit.vim.git
+[submodule "rainbow"]
+	path = pack/plugins/start/rainbow
+	url = https://github.com/luochen1990/rainbow.git
