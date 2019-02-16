@@ -13,3 +13,7 @@
 	git clone --recursive git@github.com:veerwang/vimruntime.git .vim
 5.编译ycm的命令
 	./install.py --clang-completer --system-libclang --java-completer
+6.删除gitv子工程
+	git submodule deinit gitv
+	git rm --cached gitv
+	git commit -am "xxxx"
