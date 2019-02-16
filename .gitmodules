@@ -58,9 +58,6 @@
 [submodule "pack/plugins/start/vim-signify"]
 	path = pack/plugins/start/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
-[submodule "pack/plugins/start/gitv"]
-	path = pack/plugins/start/gitv
-	url = https://github.com/vim-scripts/gitv.git
 [submodule "pack/plugins/start/Conque-Shell"]
 	path = pack/plugins/start/Conque-Shell
 	url = https://github.com/vim-scripts/Conque-Shell.git
@@ -82,3 +79,6 @@
 [submodule "pack/plugins/start/tig-explorer.vim"]
 	path = pack/plugins/start/tig-explorer.vim
 	url = https://github.com/iberianpig/tig-explorer.vim.git
+[submodule "pack/plugins/start/--force"]
+	path = pack/plugins/start/--force
+	url = https://github.com/gregsexton/gitv.git
