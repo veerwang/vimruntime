@@ -94,3 +94,9 @@
 [submodule "rainbow"]
 	path = pack/plugins/start/rainbow
 	url = https://github.com/luochen1990/rainbow.git
+[submodule "pack/plugins/start/fzf.vim"]
+	path = pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "pack/plugins/start/fzf"]
+	path = pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf

@@ -238,7 +238,8 @@ call venu#addItem(s:filemenu, 'Undo Tree', ':UndotreeToggle')
 call venu#register(s:filemenu)
 
 let s:searchmenu = venu#create('Search')
-call venu#addItem(s:searchmenu, 'File Search', ':LeaderfFile')
+call venu#addItem(s:searchmenu, 'File Search of Leadf', ':LeaderfFile')
+call venu#addItem(s:searchmenu, 'File Search of Ag', ':Ag')
 call venu#register(s:searchmenu)
 
 let s:bashmenu = venu#create('Bash')
@@ -254,7 +255,8 @@ call venu#addItem(s:vimconfigmenu, 'Configure Vim', ':edit ~/.vimrc')
 call venu#addItem(s:vimconfigmenu, 'Version', ':version')
 call venu#addItem(s:vimconfigmenu, 'Vim Help', ':tab help')
 call venu#register(s:vimconfigmenu)
-
+"17) rainbow
+let g:rainbow_active = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -307,4 +309,5 @@ nmap <leader><leader>m :vertical res +5 <cr>
 nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
 
-let g:rainbow_active = 1
+
+set rtp+=/usr/bin/fzf
