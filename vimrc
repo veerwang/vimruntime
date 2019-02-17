@@ -111,6 +111,8 @@ let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf' "
 "31) set path of system head file
 set path+=/usr/local/include
 
+"32) fzf fuzzy finder
+set rtp+=/usr/bin/fzf
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [B] plugin manage segment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -219,7 +221,7 @@ let g:GITLOG_default_mode = 2
 map <silent> <f5> :call GITLOG_FlipWindows()<cr>
 "15) tig-explore base on tig
 "16) vim-vmenu
-map <silent> <f12> :VenuPrint<cr>
+map <silent> <space><space> :VenuPrint<cr>
 
 let s:gitmenu = venu#create('Git')
 call venu#addItem(s:gitmenu, 'Git Status', ':Gstatus')
@@ -310,4 +312,3 @@ nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
 
 
-set rtp+=/usr/bin/fzf
