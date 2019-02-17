@@ -17,3 +17,4 @@
 	git submodule deinit gitv
 	git rm --cached gitv
 	git commit -am "xxxx"
+7.注意undodir是采用内置的一个sdcard自动挂载的分区
