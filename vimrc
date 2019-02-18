@@ -113,6 +113,9 @@ set path+=/usr/local/include
 
 "32) fzf fuzzy finder
 set rtp+=/usr/bin/fzf
+
+"33) terminal 
+set termwinsize=8x200
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [B] plugin manage segment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -244,8 +247,8 @@ call venu#addItem(s:searchmenu, 'File Search of Leadf', ':LeaderfFile')
 call venu#addItem(s:searchmenu, 'File Search of Ag', ':Ag')
 call venu#register(s:searchmenu)
 
-let s:bashmenu = venu#create('Bash')
-call venu#addItem(s:bashmenu, 'Terminal', ':Deol -split')
+let s:bashmenu = venu#create('Terminal')
+call venu#addItem(s:bashmenu, 'Terminal', ':terminal')
 call venu#register(s:bashmenu)
 
 let s:programmenu = venu#create('Programe')
