@@ -1,0 +1,342 @@
+From 6c6b5c763779e340340c2c2dd4b7049167f09ab1 Mon Sep 17 00:00:00 2001
+From: kevin <kevin.wang2004@hotmail.com>
+Date: Thu, 7 Feb 2019 09:27:01 +0800
+Subject: [PATCH] =?UTF-8?q?=E6=B7=BB=E5=8A=A0=E4=B8=AA=E4=BA=BA=E7=9A=84c.?=
+ =?UTF-8?q?vim=E6=8F=92=E4=BB=B6=E7=9A=84=E8=AE=A2=E5=88=B6?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ c-support/templates/Templates             | 12 +++++++-----
+ c-support/templates/c.comments.template   | 10 +++++++---
+ c-support/templates/c.cpp.template        | 12 ++++++++----
+ c-support/templates/c.idioms.template     | 21 ++++++++++++++-------
+ c-support/templates/c.statements.template | 21 ++++++++++++++-------
+ c-support/templates/cpp.comments.template |  4 ++--
+ c-support/templates/cpp.cpp.template      | 18 ++++++++++++++++++
+ c-support/templates/cpp.idioms.template   |  7 ++++---
+ 8 files changed, 74 insertions(+), 31 deletions(-)
+
+diff --git a/c-support/templates/Templates b/c-support/templates/Templates
+index 74bcd9f..0285fce 100644
+--- a/c-support/templates/Templates
++++ b/c-support/templates/Templates
+@@ -3,12 +3,14 @@ $ =============================================================
+ $ ========== USER MACROS ======================================
+ $ =============================================================
+ $
+-|AUTHOR|    = YOUR NAME 
+-|AUTHORREF| = 
+-|EMAIL|     = 
+-|COMPANY|   = 
++|AUTHOR|    = kevin
++|AUTHORREF| = WangWei 
++|EMAIL|     = kevin.wang2004@hotmail.com 
++|COMPANY|   = WangWei-Lj Home-Make
+ |COPYRIGHT| = Copyright (c) |YEAR|, |AUTHOR|
+-|STYLE|     = default
++|STYLE|     = CPP 
++|ORGANIZATION| = GNU
++|COMPILATION|  = g++
+ $
+ $ =============================================================
+ $ ========== FILE INCLUDES ====================================
+diff --git a/c-support/templates/c.comments.template b/c-support/templates/c.comments.template
+index 1501628..7fcdd0e 100644
+--- a/c-support/templates/c.comments.template
++++ b/c-support/templates/c.comments.template
+@@ -12,6 +12,8 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  * ===  FUNCTION  ======================================================================
+  *         Name:  |?FUNCTION_NAME|
+  *  Description:  <CURSOR>
++ *        Input:
++ *       Output:
+  * =====================================================================================
+  */
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@ -43,14 +45,15 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  *        Version:  1.0
+  *        Created:  |DATE| |TIME|
+  *       Revision:  none
+- *       Compiler:  gcc
++ *       Compiler:  |COMPILATION|
+  *
+  *         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
++ *        Company:  |COMPANY|
+  *   Organization:  |ORGANIZATION|
+  *
+  * =====================================================================================
+  */
+-#include <stdlib.h>
++
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == comment.file-description-header == start ==
+ /*
+@@ -63,9 +66,10 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  *        Version:  1.0
+  *        Created:  |DATE| |TIME|
+  *       Revision:  none
+- *       Compiler:  gcc
++ *       Compiler:  |COMPILATION|
+  *
+  *         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
++ *        Company:  |COMPANY|
+  *   Organization:  |ORGANIZATION|
+  *
+  * =====================================================================================
+diff --git a/c-support/templates/c.cpp.template b/c-support/templates/c.cpp.template
+index 40fb829..a482489 100644
+--- a/c-support/templates/c.cpp.template
++++ b/c-support/templates/c.cpp.template
+@@ -97,7 +97,8 @@ class |CLASSNAME|
+ {
+ 	public:
+ 		/* ====================  LIFECYCLE     ======================================= */
+-		|CLASSNAME| ();                             /* constructor */
++		|CLASSNAME| ();                                       /* constructor */
++	        ~|CLASSNAME| ();                                      /* destructor  */
+ 
+ 		/* ====================  ACCESSORS     ======================================= */
+ 
+@@ -118,14 +119,17 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ /*
+  *--------------------------------------------------------------------------------------
+  *       Class:  |?CLASSNAME:c|
+- *      Method:  |CLASSNAME|
+- * Description:  constructor
++ * Description:  <CURSOR>
+  *--------------------------------------------------------------------------------------
+  */
+ |CLASSNAME|::|CLASSNAME| ()
+-{<CURSOR>
++{
+ }  /* -----  end of method |CLASSNAME|::|CLASSNAME|  (constructor)  ----- */
+ 
++|CLASSNAME|::~|CLASSNAME| ()
++{
++}  /* -----  end of method |CLASSNAME|::|CLASSNAME|  (destructor)  ----- */
++
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == cpp.class-using-new-definition ==
+ /*
+diff --git a/c-support/templates/c.idioms.template b/c-support/templates/c.idioms.template
+index 1ae6940..8b7ae09 100644
+--- a/c-support/templates/c.idioms.template
++++ b/c-support/templates/c.idioms.template
+@@ -26,7 +26,8 @@ static void<CURSOR>
+ }		/* -----  end of static function |FUNCTION_NAME|  ----- */
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == idioms.main ==
+-#include	<stdlib.h>
++#include <stdlib.h>
++#include <stdio.h>
+ 
+ /* 
+  * ===  FUNCTION  ======================================================================
+@@ -65,7 +66,8 @@ scanf ( "<CURSOR>", & );
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == idioms.calloc ==
+ |?POINTER|	= calloc ( (size_t)(<CURSOR><+COUNT+>), sizeof(<+TYPE+>) );
+-if ( |POINTER|==NULL ) {
++if ( |POINTER|==NULL ) 
++{
+ 	fprintf ( stderr, "\ndynamic memory allocation failed\n" );
+ 	exit (EXIT_FAILURE);
+ }
+@@ -76,7 +78,8 @@ free (|POINTER|);
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == idioms.malloc ==
+ |?POINTER|	= malloc ( sizeof(<CURSOR><+TYPE+>) );
+-if ( |POINTER|==NULL ) {
++if ( |POINTER|==NULL ) 
++{
+ 	fprintf ( stderr, "\ndynamic memory allocation failed\n" );
+ 	exit (EXIT_FAILURE);
+ }
+@@ -87,7 +90,8 @@ free (|POINTER|);
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == idioms.realloc ==
+ |?POINTER|	= realloc ( |POINTER|, sizeof(<CURSOR><+TYPE+>) );
+-if ( |POINTER|==NULL ) {
++if ( |POINTER|==NULL ) 
++{
+ 	fprintf ( stderr, "\ndynamic memory reallocation failed\n" );
+ 	exit (EXIT_FAILURE);
+ }
+@@ -103,13 +107,15 @@ FILE	*|?FILEPOINTER|;										/* input-file pointer */
+ char	*|FILEPOINTER|_file_name = "<CURSOR>";		/* input-file name    */
+ 
+ |FILEPOINTER|	= fopen( |FILEPOINTER|_file_name, "r" );
+-if ( |FILEPOINTER| == NULL ) {
++if ( |FILEPOINTER| == NULL ) 
++{
+ 	fprintf ( stderr, "couldn't open file '%s'; %s\n",
+ 			|FILEPOINTER|_file_name, strerror(errno) );
+ 	exit (EXIT_FAILURE);
+ }
+ <SPLIT>{-continue here-}
+-if( fclose(|FILEPOINTER|) == EOF ) {			/* close input file   */
++if( fclose(|FILEPOINTER|) == EOF ) 			/* close input file   */
++{
+ 	fprintf ( stderr, "couldn't close file '%s'; %s\n",
+ 			|FILEPOINTER|_file_name, strerror(errno) );
+ 	exit (EXIT_FAILURE);
+@@ -121,7 +127,8 @@ FILE	*|?FILEPOINTER|;										/* output-file pointer */
+ char	*|FILEPOINTER|_file_name = "<CURSOR>";		/* output-file name    */
+ 
+ |FILEPOINTER|	= fopen( |FILEPOINTER|_file_name, "w" );
+-if ( |FILEPOINTER| == NULL ) {
++if ( |FILEPOINTER| == NULL ) 
++{
+ 	fprintf ( stderr, "couldn't open file '%s'; %s\n",
+ 			|FILEPOINTER|_file_name, strerror(errno) );
+ 	exit (EXIT_FAILURE);
+diff --git a/c-support/templates/c.statements.template b/c-support/templates/c.statements.template
+index 574366d..605f86b 100644
+--- a/c-support/templates/c.statements.template
++++ b/c-support/templates/c.statements.template
+@@ -7,14 +7,16 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ for ( <CURSOR>; ; )
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == statements.for-block ==
+-for ( <CURSOR>; ; ) {
++for ( <CURSOR>; ; ) 
++{
+ <SPLIT>}
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == statements.if ==
+ if ( <CURSOR> )
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == statements.if-block ==
+-if ( <CURSOR> ) {
++if ( <CURSOR> ) 
++{
+ <SPLIT><-IF PART->
+ }
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@ -23,10 +25,12 @@ if ( <CURSOR> )
+ <SPLIT>else
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == statements.if-block-else ==
+-if ( <CURSOR> ) {
++if ( <CURSOR> ) 
++{
+ <SPLIT><-IF PART->
+ }
+-else {
++else 
++{
+ <-ELSE PART->
+ }
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@ -39,11 +43,14 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ while ( <CURSOR> )
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == statements.while-block ==
+-while ( <CURSOR> ) {
+-<SPLIT>}
++while ( <CURSOR> ) 
++{
++<SPLIT>
++}
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == statements.switch ==
+-switch ( <CURSOR> ) {
++switch ( <CURSOR> ) 
++{
+ 	case <-LABEL->:	
+ 		<SPLIT>break;
+ 
+diff --git a/c-support/templates/cpp.comments.template b/c-support/templates/cpp.comments.template
+index 5cb19db..b91ed44 100644
+--- a/c-support/templates/cpp.comments.template
++++ b/c-support/templates/cpp.comments.template
+@@ -39,7 +39,7 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ //       Compiler:  g++
+ // 
+ //         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
+-//        Company:  |ORGANIZATION|
++//        Company:  |COMPANY|
+ // 
+ // =====================================================================================
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@ -56,7 +56,7 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ //       Compiler:  g++
+ // 
+ //         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
+-//        Company:  |ORGANIZATION|
++//        Company:  |COMPANY|
+ // 
+ // =====================================================================================
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+diff --git a/c-support/templates/cpp.cpp.template b/c-support/templates/cpp.cpp.template
+index ddcaada..3781beb 100644
+--- a/c-support/templates/cpp.cpp.template
++++ b/c-support/templates/cpp.cpp.template
+@@ -92,11 +92,19 @@ class |CLASSNAME|
+   public:
+     // ====================  LIFECYCLE     =======================================
+     |CLASSNAME| ();                             // constructor
++    ~|CLASSNAME| ();                            // destructor
+ 
+ 		// ====================  ACCESSORS     =======================================
+ 
+ 		// ====================  MUTATORS      =======================================
+ 
++		// ====================  OPERATORS     =======================================
++  protected:
++
++		// ====================  OPERATORS     =======================================
++
++  private:
++
+ 		// ====================  OPERATORS     =======================================
+ 
+   protected:
+@@ -109,6 +117,8 @@ class |CLASSNAME|
+ 
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == cpp.class-implementation ==
++#include "|?CLASSNAME:c|.h"
++
+ //--------------------------------------------------------------------------------------
+ //       Class:  |?CLASSNAME|
+ //      Method:  |CLASSNAME|
+@@ -117,6 +127,14 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ |CLASSNAME|::|CLASSNAME| ()
+ {<CURSOR>
+ }  // -----  end of method |CLASSNAME|::|CLASSNAME|  (constructor)  -----
++//--------------------------------------------------------------------------------------
++//       Class:  |?CLASSNAME|
++//      Method:  ~|CLASSNAME|
++// Description:  destructor
++//--------------------------------------------------------------------------------------
++|CLASSNAME|::~|CLASSNAME| ()
++{
++}  // -----  end of method |CLASSNAME|::~|CLASSNAME|  (destructor)  -----
+ 
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == cpp.class-using-new-definition ==
+diff --git a/c-support/templates/cpp.idioms.template b/c-support/templates/cpp.idioms.template
+index 911592d..48521d7 100644
+--- a/c-support/templates/cpp.idioms.template
++++ b/c-support/templates/cpp.idioms.template
+@@ -14,10 +14,11 @@ static void<CURSOR>
+ }		// -----  end of static function |FUNCTION_NAME|  -----
+ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ == idioms.main ==
+-#include	<cstdlib>
++#include <cstdlib>
++#include <cstdio>
++#include <iostream>
+ 
+-int
+-main ( int argc, char *argv[] )
++int main ( int argc, char *argv[] )
+ {<CURSOR>
+ <SPLIT>	return EXIT_SUCCESS;
+ }				// ----------  end of function main  ----------
+-- 
+2.20.1
+
