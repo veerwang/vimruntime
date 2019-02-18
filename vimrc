@@ -251,6 +251,9 @@ call venu#addItem(s:vimconfigmenu, 'Vim Help', ':tab help')
 call venu#register(s:vimconfigmenu)
 "17) rainbow
 let g:rainbow_active = 1
+"18) startify
+let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
