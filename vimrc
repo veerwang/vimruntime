@@ -235,6 +235,10 @@ call venu#addItem(s:gitmenu, 'Tig Browse', ':TigOpenProjectRootDir')
 call venu#addItem(s:gitmenu, 'Tig Blame', ':TigBlame')
 call venu#register(s:gitmenu)
 
+let s:projectmenu = venu#create('Project')
+call venu#addItem(s:projectmenu, 'Session Save', ':SSave')
+call venu#register(s:projectmenu)
+
 let s:searchmenu = venu#create('Search')
 call venu#addItem(s:searchmenu, 'File Search of Leadf', ':LeaderfFile')
 call venu#addItem(s:searchmenu, 'File Search of Ag', ':Ag')
