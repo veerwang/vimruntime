@@ -210,14 +210,6 @@ let g:gutentags_plus_switch = 1
 "need  jedi and python-syntax plugins
 let g:jedi#auto_initialization=1
 let g:jedi#completions_command = "<C-N>"
-"12) Shell bash plugin
-let g:ConqueTerm_CodePage=0
-let g:ConqueTerm_Color = 2
-let g:ConqueTerm_StartMessages = 0
-let g:ConqueTerm_FastMode=0
-let g:ConqueTerm_ReadUnfocused=1
-let g:ConqueTerm_CloseOnEnd = 1
-let g:ConqueTerm_CWInsert = 1
 "13) Leadf fuzzy find tool 
 "14) vimgitlog
 let g:GITLOG_default_mode = 2
@@ -225,6 +217,13 @@ map <silent> <f5> :call GITLOG_FlipWindows()<cr>
 "15) tig-explore base on tig
 "16) vim-vmenu
 map <silent> <space><space> :VenuPrint<cr>
+
+let s:programmenu = venu#create('Programe')
+call venu#addItem(s:programmenu, 'Add C/C++ Head Flag', ':HeaderguardAdd')
+call venu#addItem(s:programmenu, 'File Browse', ':NERDTreeToggle')
+call venu#addItem(s:programmenu, 'File Structure', ':TagbarToggle')
+call venu#addItem(s:programmenu, 'Undo Tree', ':UndotreeToggle')
+call venu#register(s:programmenu)
 
 let s:gitmenu = venu#create('Git')
 call venu#addItem(s:gitmenu, 'Git Status', ':Gstatus')
@@ -236,12 +235,6 @@ call venu#addItem(s:gitmenu, 'Tig Browse', ':TigOpenProjectRootDir')
 call venu#addItem(s:gitmenu, 'Tig Blame', ':TigBlame')
 call venu#register(s:gitmenu)
 
-let s:filemenu = venu#create('Edit')
-call venu#addItem(s:filemenu, 'File Browse', ':NERDTreeToggle')
-call venu#addItem(s:filemenu, 'File Structure', ':TagbarToggle')
-call venu#addItem(s:filemenu, 'Undo Tree', ':UndotreeToggle')
-call venu#register(s:filemenu)
-
 let s:searchmenu = venu#create('Search')
 call venu#addItem(s:searchmenu, 'File Search of Leadf', ':LeaderfFile')
 call venu#addItem(s:searchmenu, 'File Search of Ag', ':Ag')
@@ -250,10 +243,6 @@ call venu#register(s:searchmenu)
 let s:bashmenu = venu#create('Terminal')
 call venu#addItem(s:bashmenu, 'Terminal', ':terminal')
 call venu#register(s:bashmenu)
-
-let s:programmenu = venu#create('Programe')
-call venu#addItem(s:programmenu, 'Add C/C++ Head Flag', ':HeaderguardAdd')
-call venu#register(s:programmenu)
 
 let s:vimconfigmenu = venu#create('Config')
 call venu#addItem(s:vimconfigmenu, 'Configure Vim', ':edit ~/.vimrc')
