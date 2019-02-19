@@ -133,7 +133,8 @@ endfunction
 "3)
 set t_Co=256
 set background=light
-colorscheme badwolf
+"colorscheme badwolf
+colorscheme busybee
 "4) airline 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -250,6 +251,7 @@ call venu#register(s:bashmenu)
 
 let s:vimconfigmenu = venu#create('Config')
 call venu#addItem(s:vimconfigmenu, 'Configure Vim', ':edit ~/.vimrc')
+call venu#addItem(s:vimconfigmenu, 'Set BG Color', ':Colors')
 call venu#addItem(s:vimconfigmenu, 'Version', ':version')
 call venu#addItem(s:vimconfigmenu, 'Vim Help', ':tab help')
 call venu#register(s:vimconfigmenu)
