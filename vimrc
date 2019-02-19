@@ -243,6 +243,7 @@ call venu#register(s:projectmenu)
 let s:searchmenu = venu#create('Search')
 call venu#addItem(s:searchmenu, 'File Search of Leadf', ':LeaderfFile')
 call venu#addItem(s:searchmenu, 'File Search of Ag', ':Ag')
+call venu#addItem(s:searchmenu, 'English', ':call SearchWord()')
 call venu#register(s:searchmenu)
 
 let s:bashmenu = venu#create('Terminal')

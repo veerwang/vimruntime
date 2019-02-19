@@ -103,3 +103,6 @@
 [submodule "pack/plugins/start/csapprox"]
 	path = pack/plugins/start/csapprox
 	url = https://github.com/godlygeek/csapprox.git
+[submodule "pack/plugins/start/vim-sdcv"]
+	path = pack/plugins/start/vim-sdcv
+	url = https://github.com/chusiang/vim-sdcv.git
