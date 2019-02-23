@@ -262,6 +262,8 @@ let g:rainbow_active = 1
 let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
 "19) ag.vim search sprint from .git root
 let g:ag_working_path_mode="r"
+"20) vim-nots
+let g:notes_directories = [ '/home/kevin/.vim/undodir/notes' ]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
