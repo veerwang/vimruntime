@@ -260,6 +260,8 @@ call venu#register(s:vimconfigmenu)
 let g:rainbow_active = 1
 "18) startify
 let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
+"19) ag.vim search sprint from .git root
+let g:ag_working_path_mode="r"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
@@ -312,5 +314,4 @@ nmap <leader><leader>n :vertical res -5 <cr>
 nmap <leader><leader>m :vertical res +5 <cr>
 nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
-
 

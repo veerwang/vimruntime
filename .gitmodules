@@ -106,3 +106,6 @@
 [submodule "pack/plugins/start/vim-sdcv"]
 	path = pack/plugins/start/vim-sdcv
 	url = https://github.com/chusiang/vim-sdcv.git
+[submodule "pack/plugins/start/vim-action-ag"]
+	path = pack/plugins/start/vim-action-ag
+	url = https://github.com/Chun-Yang/vim-action-ag.git
