@@ -238,6 +238,7 @@ call venu#addItem(s:gitmenu, 'Tig Blame', ':TigBlame')
 call venu#register(s:gitmenu)
 
 let s:projectmenu = venu#create('Project')
+call venu#addItem(s:projectmenu, 'Home Page', ':Startify')
 call venu#addItem(s:projectmenu, 'Session Save', ':SSave')
 call venu#register(s:projectmenu)
 
