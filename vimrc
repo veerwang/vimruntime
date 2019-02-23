@@ -251,15 +251,16 @@ let s:bashmenu = venu#create('Terminal')
 call venu#addItem(s:bashmenu, 'Terminal', ':terminal')
 call venu#register(s:bashmenu)
 
+let s:noteconfigmenu = venu#create('Note')
+call venu#addItem(s:noteconfigmenu, 'Note', ':Note mynotes')
+call venu#register(s:noteconfigmenu)
+
 let s:vimconfigmenu = venu#create('Config')
 call venu#addItem(s:vimconfigmenu, 'Configure Vim', ':edit ~/.vimrc')
 call venu#addItem(s:vimconfigmenu, 'Set BG Color', ':Colors')
 call venu#addItem(s:vimconfigmenu, 'Version', ':version')
 call venu#addItem(s:vimconfigmenu, 'Vim Help', ':tab help')
 call venu#register(s:vimconfigmenu)
-
-let s:noteconfigmenu = venu#create('Note')
-call venu#addItem(s:noteconfigmenu, 'Note', ':Note mynote')
 
 "17) rainbow
 let g:rainbow_active = 1
@@ -268,7 +269,7 @@ let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
 "19) ag.vim search sprint from .git root
 let g:ag_working_path_mode="r"
 "20) vim-nots
-let g:notes_directories = [ '/home/kevin/.vim/undodir/notes' ]
+let g:notes_directories = [ '/home/kevin/.vim/notes' ]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Z] my short key define 
