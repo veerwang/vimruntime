@@ -134,7 +134,7 @@ endfunction
 set t_Co=256
 set background=light
 "colorscheme badwolf
-colorscheme busybee
+colorscheme delphi
 "4) airline 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -142,7 +142,8 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = ' '
 "let g:airline_theme='papercolor'
-let g:airline_theme='badwolf'
+"let g:airline_theme='badwolf'
+let g:airline_theme='base16_vim'
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_section_c='%F'
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
@@ -256,6 +257,10 @@ call venu#addItem(s:vimconfigmenu, 'Set BG Color', ':Colors')
 call venu#addItem(s:vimconfigmenu, 'Version', ':version')
 call venu#addItem(s:vimconfigmenu, 'Vim Help', ':tab help')
 call venu#register(s:vimconfigmenu)
+
+let s:noteconfigmenu = venu#create('Note')
+call venu#addItem(s:noteconfigmenu, 'Note', ':Note mynote')
+
 "17) rainbow
 let g:rainbow_active = 1
 "18) startify
