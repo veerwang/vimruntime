@@ -58,7 +58,7 @@ set nobackup
 set shortmess=atl
 
 "15)set the tags file name
-set tags=./.tags;,.tags
+set tags=./.tags;,.tags;,./tags
 
 "16) turn the wild menu
 set wildmenu
