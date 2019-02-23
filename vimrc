@@ -133,8 +133,10 @@ endfunction
 "3)
 set t_Co=256
 set background=light
-"colorscheme badwolf
-colorscheme delphi
+"colorscheme badwolf  
+"this set bg method
+autocmd ColorScheme janah highlight Normal ctermbg=235
+colorscheme janah 
 "4) airline 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -323,4 +325,3 @@ nmap <leader><leader>n :vertical res -5 <cr>
 nmap <leader><leader>m :vertical res +5 <cr>
 nmap <leader><leader>p :res -5 <cr>
 nmap <leader><leader>l :res +5 <cr>
-
