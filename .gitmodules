@@ -118,3 +118,6 @@
 [submodule "vim-misc"]
 	path = pack/plugins/start/vim-misc
 	url = https://github.com/xolox/vim-misc.git
+[submodule "notes"]
+	path = notes
+	url = /home/kevin/DataLibrary/Programme/mynotes.git
